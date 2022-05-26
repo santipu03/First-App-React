@@ -3,8 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Live Demo
-<a href="https://santipu03.github.io/First-App-React/" target="_blank">---- Click Here! ----</a>
-<a href="https://www.google.com/" target="_blank">Google</a>
+<a href="https://santipu03.github.io/First-App-React/" target="_blank"><strong>---- Click Here! ----</strong></a>
 <br>
 
 ## Available Scripts
