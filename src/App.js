@@ -21,6 +21,7 @@ export default class App extends React.Component{
       tasksArray: [...previousState.tasksArray, this.state.inputValue],
       inputValue: ""
     }))
+    console.log(this.state.tasksArray)
   }
 
   onDeleteTask (name) {
