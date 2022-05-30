@@ -6,17 +6,21 @@ export default class App extends React.Component{
   constructor () {
     super()
     this.state = {
-      tasksArray: []
+      tasksArray: [],
+      inputValue: ''
     }
+  }
+
+  handleChange (e) {
+    this.setState({inputValue: e.target.value})
   }
 
   onSubmitTask (e) {
     e.preventDefault()
-    const value = e.currentTarget.firstElementChild.value
     this.setState(previousState => ({
-      tasksArray: [...previousState.tasksArray, value],
+      tasksArray: [...previousState.tasksArray, this.state.inputValue],
+      inputValue: ""
     }))
-    document.querySelector("form").reset()
   }
 
   onDeleteTask (name) {
@@ -29,7 +33,7 @@ export default class App extends React.Component{
     return (
       <div className="card">
         <form onSubmit={this.onSubmitTask.bind(this)}>
-          <input type={"text"}></input>
+          <input type={"text"} value={this.state.inputValue} onChange={this.handleChange.bind(this)} ></input>
           <button type="submit">Add Task</button>
         </form>
         <Overview 
